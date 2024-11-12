@@ -1,0 +1,18 @@
+#!/bin/bash
+
+[Unit]
+Description=Skeeball Node.js Application
+After=network.target
+
+[Service]
+Type=forking
+User=ryan
+WorkingDirectory=/home/ryan/Documents/git/skeeball/bin
+ExecStart=/bin/bash /home/ryan/Documents/git/skeeball/bin/start_skeeball.sh
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/ryan/.Xauthority"
+StandardOutput=append:/var/log/skeeball.log
+StandardError=append:/var/log/skeeball.err
+
+[Install]
+WantedBy=multi-user.target

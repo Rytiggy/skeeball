@@ -1,0 +1,25 @@
+{
+  "name": "skeeball",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo $(which node) index.js",
+    "service:status": "sudo /etc/systemd/system/skeeball status",
+    "service:stop": " sudo systemctl stop skeeball.service",
+    "service:start": "sudo /etc/systemd/system/skeeball start",
+    "service:edit": "sudo vi /etc/systemd/system/skeeball",
+    "service:reload": "sudo update-rc.d skeeball defaults"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@commonify/lowdb": "^3.0.0",
+    "@gbkwiatt/node-rpi-ws281x-native": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "pigpio": "^3.3.1",
+    "ws": "^8.18.0"
+  }
+}
