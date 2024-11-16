@@ -1,16 +1,13 @@
 <script setup>
+import previousGames from "@/components/previousGames.vue";
 import scoreBoard from "@/components/scoreBoard.vue"
-import { useGameStore } from "@/stores/useGameStore";
-import { storeToRefs } from 'pinia'
-const gameStore = useGameStore();
-const { games } = storeToRefs(gameStore)
 
-gameStore.getGames()
+
 </script>
 
 <template>
   <main>
+    <previousGames />
     <scoreBoard />
-    <!-- {{ games }} -->
   </main>
 </template>

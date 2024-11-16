@@ -1,0 +1,1581 @@
+{
+  "games": [
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 4,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 27,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 27,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 4,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 17,
+        "start": 0,
+        "end": 46,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 27,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 4,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 4,
+        "start": 47,
+        "end": 93,
+        "score": 100,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 27,
+        "start": 94,
+        "end": 140,
+        "score": 50,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      }
+    ],
+    [
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ],
+    [
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 6,
+        "start": 188,
+        "end": 234,
+        "score": 30,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 13,
+        "start": 141,
+        "end": 187,
+        "score": 40,
+        "ledGpio": 18,
+        "stripLength": 235,
+        "stripType": "sk6812-rgbw"
+      },
+      {
+        "gpio": 5,
+        "start": 47,
+        "end": 93,
+        "score": 10,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      },
+      {
+        "gpio": 22,
+        "start": 0,
+        "end": 46,
+        "score": 20,
+        "ledGpio": 12,
+        "stripLength": 94,
+        "stripType": "ws2812"
+      }
+    ]
+  ]
+}

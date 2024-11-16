@@ -2,17 +2,19 @@
 const pigpio = require('pigpio');
 const Gpio = pigpio.Gpio;
 
+// ---- trap the SIGINT and reset before exit
+process.on('SIGINT', function () {
+  pigpio.terminate();
+});
+
+
+pigpio.initialize();
+
+
 module.exports = {
   sensors: [],
-  terminate() {
-    this.sensors.forEach((sensor) => {
-      // pigpio.terminate()
-      sensor.digitalWrite(0);
-    })
-  },
   // Creates the gpio pin and setups the logic to event when the sensor is triggered
   init(sensorMap = [], callback = (s) => { }) {
-    pigpio.initialize();
     pigpio.configureClock(1, pigpio.CLOCK_PWM);
     console.log("sensor init")
     this.sensors = []

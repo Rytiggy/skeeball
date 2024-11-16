@@ -12,14 +12,22 @@ process.on('SIGINT', function () {
 
 
 module.exports = {
-
+  leds: {},
+  init(strips) {
+    strips.forEach(strip => {
+      const { stripType, totalLeds, gpio } = strip
+      const channel = ws281x(totalLeds, { gpio: gpio, invert: false, brightness: 255, stripType });
+      this.leds[stripType] = channel;
+    })
+  },
   toggleLedSegment(startLed, endLed, totalLeds, gpio, stripType = 'ws2812') {
-    const channel = ws281x(totalLeds, { gpio: gpio, invert: false, brightness: 255, stripType });
-    channel.array = setColor(channel.array, 0, 0, 255, startLed, startLed + 46)
+    // const channel = ws281x(totalLeds, { gpio: gpio, invert: false, brightness: 255, stripType });
+    const channel = this.leds[stripType]
+    channel.array = setColor(channel.array, 0, 0, 255, startLed, startLed + 47)
     ws281x.render();
-    setTimeout(() => {
-      ws281x.reset();
-    }, 1000)
+    // setTimeout(() => {
+    //   ws281x.reset();
+    // }, 1000)
   }
 }
 

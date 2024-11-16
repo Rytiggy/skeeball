@@ -23,7 +23,14 @@ const { game } = storeToRefs(gameStore)
             </div>
             <div class="score">{{ game.score }}</div>
         </div>
+
     </div>
+    <div class="game-status" :class="[game.isActive ? 'text-blue' : 'text-red']">
+        {{ game.isActive ? 'Active' : 'Press Start' }}
+    </div>
+
+    <div class="label-sm pt-md">Ball {{ game.count }} of 9</div>
+
 </template>
 <style>
 /* Import fonts for SKEE-BALL and Digital display */
@@ -110,11 +117,42 @@ body {
     text-shadow: 0 0 10px #00ffff, 0 0 20px #00cccc, 0 0 30px #00cccc;
 }
 
+.label-sm {
+    font-family: 'Audiowide', sans-serif;
+
+    color: #888;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+
 .score {
     font-family: 'VT323', monospace;
     /* 8-bit style for the score */
     color: #ff0000;
     font-size: 60px;
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff3333, 0 0 30px #ff3333;
+}
+
+
+.text-blue {
+    color: #00ffff;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+
+.game-status {
+    font-family: 'VT323', monospace;
+    font-size: 65px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pt-md {
+    padding-top: 10px;
 }
 </style>

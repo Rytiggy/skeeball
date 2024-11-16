@@ -15,7 +15,7 @@ const sensorMap = [
     stripType: "sk6812-rgbw"
   },
   {
-    gpio: 27,
+    gpio: 4,
     start: 47,
     end: 93,
     score: 100,
@@ -24,9 +24,9 @@ const sensorMap = [
     stripType: "sk6812-rgbw"
   },
   {
-    gpio: 4,
-    start: 94,
-    end: 140,
+    gpio: 27,
+    start: 94, // update
+    end: 140, // update
     score: 50,
     ledGpio: 18,
     stripLength: 235,
@@ -73,17 +73,25 @@ const sensorMap = [
   },
 ]
 module.exports = {
-  score: [],
+  points: [],
   isActive: false,
   getTotalScore() {
-    return this.score.reduce((a, b) => a + b.score, 0)
+    return this.points.reduce((a, b) => a + b.score, 0)
+  },
+  getGame() {
+    return {
+      score: this.getTotalScore(),
+      isActive: this.isActive,
+      count: this.points.length,
+      points: this.points
+    }
   },
   start(sendMessage) {
-    console.log("start called", this.score, this.isActive)
     if (this.isActive)
       return
-    this.score = []
-    sendMessage({ type: 'start', data: { score: this.getTotalScore() } })
+    this.isActive = true
+    this.points = []
+    sendMessage({ type: 'start', data: { game: this.getGame() } })
 
     try {
       // Open the door to let the ball fall
@@ -105,24 +113,33 @@ module.exports = {
       if (!this.isActive)
         return
 
-      this.score.push(sensor)
-      if (this.score.length >= 9) {
-        console.log("Game over - Total score", this.getTotalScore(), this.score)
-        database.write(this.score)
+      this.points.push(sensor)
+      sendMessage({ type: 'score', data: { game: this.getGame() } })
+
+      if (this.points.length >= 9) {
+        database.write(this.points)
         this.isActive = false
-        sendMessage({ type: 'end', data: { score: this.getTotalScore() } })
-        // sensors.terminate()
+        sendMessage({ type: 'end', data: { game: this.getGame() } })
       }
-      // Add the score of this sensor to the total score
-      console.log('beam broken', sensor, "score length", this.score.length)
-      sendMessage({ type: 'score', data: { sensor, score: this.getTotalScore() } })
 
       // Show lights for beams ring
-      leds.toggleLedSegment(sensor.start, sensor.end, sensor.stripLength, sensor.ledGpio, sensor.stripType)
+      // leds.toggleLedSegment(sensor.start, sensor.end, sensor.stripLength, sensor.ledGpio, sensor.stripType)
 
     }
 
     sensors.init(sensorMap, beamBroken)
-    this.isActive = true
+    // const ledStrips = [
+    //   {
+    //     stripType: "sk6812-rgbw",
+    //     totalLeds: 235,
+    //     gpio: 18,
+    //   },
+    //   {
+    //     stripType: "ws2812",
+    //     totalLeds: 94,
+    //     gpio: 12,
+    //   }
+    // ]
+    // leds.init(ledStrips)
   },
 }

@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { useApi } from '@/composables/useApi'
 export const useGameStore = defineStore('game', () => {
@@ -6,18 +6,22 @@ export const useGameStore = defineStore('game', () => {
   const games = ref([])
   const game = ref({
     score: 0,
-    sensor: null
+    sensor: null,
+    isActive: null,
+    count: 0
+  })
+
+  const getLastGame = computed(() => {
+    return games.value[games.value.length - 1]
   })
 
   async function getGames() {
     const response = await instance.get('/games')
-    console.log(response.data)
     games.value = response.data
   }
 
   // Listen for messages
   socket.addEventListener("message", (event) => {
-    console.log("Message from server ", event.data);
     const response = JSON.parse(event.data)
     const data = response.data
 
@@ -34,5 +38,6 @@ export const useGameStore = defineStore('game', () => {
 
 
 
-  return { games, game, getGames }
+
+  return { games, game, getGames, getLastGame }
 })

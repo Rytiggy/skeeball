@@ -12,7 +12,6 @@ const wss = new WebSocket.Server({ port: 80 });
 
 
 wss.on('connection', (ws) => {
-    console.log(ws)
     // Code to handle new WebSocket connections
 });
 
@@ -27,7 +26,6 @@ function sendMessage(data) {
     });
 }
 
-
 app.post('/start-game', (req, res) => {
     res.send({ data: "Game started" })
     game.start(sendMessage)
@@ -39,9 +37,6 @@ app.get('/games', async (req, res) => {
 
 })
 
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
-
 })
-
