@@ -7,5 +7,6 @@ module.exports = {
   setPostion(postion = 1000) {
 
     moter.servoWrite(postion);
+
   }
 }

@@ -3,6 +3,7 @@ const sensors = require('./sensors.js')
 const leds = require('./leds.js')
 const moter = require('./moters.js')
 const database = require('./database.js')
+
 // build the sensor map: maps the break beam gpio pin to the strip segment
 const sensorMap = [
   {
@@ -72,18 +73,25 @@ const sensorMap = [
     stripType: "ws2812"
   },
 ]
+
+const ledStrips = [
+  { count: 234, gpio: 18, invert: false, brightness: 255, stripType: 'sk6812-rgbw' },
+  { count: 94, gpio: 12, invert: false, brightness: 255, stripType: 'ws2812' }
+]
+// leds.init(ledStrips)
+
 module.exports = {
   points: [],
   isActive: false,
   getTotalScore() {
-    return this.points.reduce((a, b) => a + b.score, 0)
   },
   getGame() {
     return {
-      score: this.getTotalScore(),
+      score: this.points.reduce((a, b) => a + b.score, 0),
       isActive: this.isActive,
       count: this.points.length,
-      points: this.points
+      points: this.points,
+      player: "Player"
     }
   },
   start(sendMessage) {
@@ -98,12 +106,8 @@ module.exports = {
       moter.setPostion(1000)
       // Wait a few seconds for the balls the fall down
       setTimeout(() => {
-        moter.setPostion(1700)
-      }, 5000)
-      // This other timeout is so it doesn't get in the vibration state 
-      setTimeout(() => {
         moter.setPostion(2000)
-      }, 10000)
+      }, 5000)
     } catch (e) {
       console.error("error", e)
     }
@@ -112,34 +116,20 @@ module.exports = {
     const beamBroken = (sensor) => {
       if (!this.isActive)
         return
+      console.log("beam broken", sensor.stripType, sensor.start, sensor.end)
+      // leds.toggleLedSegment(sensor.stripType, sensor.start, sensor.end)
 
       this.points.push(sensor)
       sendMessage({ type: 'score', data: { game: this.getGame() } })
 
       if (this.points.length >= 9) {
-        database.write(this.points)
+        database.write(this.getGame())
         this.isActive = false
         sendMessage({ type: 'end', data: { game: this.getGame() } })
       }
-
-      // Show lights for beams ring
-      // leds.toggleLedSegment(sensor.start, sensor.end, sensor.stripLength, sensor.ledGpio, sensor.stripType)
-
     }
 
     sensors.init(sensorMap, beamBroken)
-    // const ledStrips = [
-    //   {
-    //     stripType: "sk6812-rgbw",
-    //     totalLeds: 235,
-    //     gpio: 18,
-    //   },
-    //   {
-    //     stripType: "ws2812",
-    //     totalLeds: 94,
-    //     gpio: 12,
-    //   }
-    // ]
-    // leds.init(ledStrips)
+
   },
 }

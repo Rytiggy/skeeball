@@ -19,6 +19,6 @@ sudo /home/ryan/.nvm/versions/node/v22.9.0/bin/node /home/ryan/Documents/git/ske
 URL="http://skeeball.local:5173"
 
 # Open Chromium browser to the specified URL in fullscreen/kiosk without sudo
-chromium-browser "$URL" --no-sandbox --start-fullscreen --kiosk &  # Remove `sudo` here
+chromium-browser "$URL" --kiosk &  
 
 wait

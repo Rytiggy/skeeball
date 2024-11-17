@@ -27,16 +27,31 @@ function sendMessage(data) {
 }
 
 app.post('/start-game', (req, res) => {
-    res.send({ data: "Game started" })
+    res.send({ message: "Game started" })
     game.start(sendMessage)
 })
 
-app.get('/games', async (req, res) => {
+app.get('/high-score', async (req, res) => {
     const games = await database.read()
-    res.send(games)
+    console.log(games)
+    const highscoreToday = Math.max(...games?.filter(game => isInToday(new Date(game?.createdAt))).map(o => o?.score))
+    const allTimeHighscore = Math.max(...games?.map(o => o?.score))
+    res.send({ ever: allTimeHighscore, today: highscoreToday })
 
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Skeeball started on port ${port}`)
 })
+
+
+function isInToday(inputDate) {
+    if (!inputDate)
+        return false
+
+    var today = new Date();
+    if (today.setHours(0, 0, 0, 0) == inputDate.setHours(0, 0, 0, 0)) {
+        return true;
+    }
+    else { return false; }
+}
