@@ -3,7 +3,6 @@ import { useGameStore } from "@/stores/useGameStore";
 import { storeToRefs } from 'pinia'
 const gameStore = useGameStore();
 const { topScore, game } = storeToRefs(gameStore)
-gameStore.getHighScore()
 
 </script>
 
@@ -13,8 +12,9 @@ gameStore.getHighScore()
             <div class="label-sm">Today</div>
             <div class="text-h4 text-white">{{ topScore.today }}</div>
         </div>
+
         <div v-if="game.isActive" class="grid gap-1">
-            <!-- <div class="label-sm">Ball Left</div> -->
+            <div class="label-sm">{{ game.player }}</div>
             <div class="text-h4 text-white pt-md">Balls Left: {{ 9 - game.count }}</div>
         </div>
 

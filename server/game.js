@@ -83,6 +83,7 @@ const ledStrips = [
 module.exports = {
   points: [],
   isActive: false,
+  player: "Player",
   getTotalScore() {
   },
   getGame() {
@@ -91,12 +92,15 @@ module.exports = {
       isActive: this.isActive,
       count: this.points.length,
       points: this.points,
-      player: "Player"
+      player: this.player
     }
   },
-  start(sendMessage) {
+  start(sendMessage, player = "Player") {
+    // Fail out early if game is already active
     if (this.isActive)
       return
+    console.log("Active Player", player)
+    this.player = player
     this.isActive = true
     this.points = []
     sendMessage({ type: 'start', data: { game: this.getGame() } })
@@ -130,6 +134,5 @@ module.exports = {
     }
 
     sensors.init(sensorMap, beamBroken)
-
   },
 }

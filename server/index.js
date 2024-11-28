@@ -5,6 +5,7 @@ const WebSocket = require('ws');
 var cors = require('cors');
 
 const app = express()
+app.use(express.json())
 app.use(cors())
 const port = 3000
 const wss = new WebSocket.Server({ port: 80 });
@@ -27,17 +28,24 @@ function sendMessage(data) {
 }
 
 app.post('/start-game', (req, res) => {
+    console.log("Start Game", req.body)
+    game.start(sendMessage, req.body?.data?.player)
+
     res.send({ message: "Game started" })
-    game.start(sendMessage)
+
 })
 
 app.get('/high-score', async (req, res) => {
     const games = await database.read()
-    console.log(games)
     const highscoreToday = Math.max(...games?.filter(game => isInToday(new Date(game?.createdAt))).map(o => o?.score))
     const allTimeHighscore = Math.max(...games?.map(o => o?.score))
     res.send({ ever: allTimeHighscore, today: highscoreToday })
+})
 
+app.get('/last-5-games', async (req, res) => {
+    const games = await database.read()
+    const lastFiveGames = games.slice(Math.max(games.length - 5, 1))
+    res.send({ lastFiveGames })
 })
 
 app.listen(port, () => {

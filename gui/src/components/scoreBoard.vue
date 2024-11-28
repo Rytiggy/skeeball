@@ -8,14 +8,29 @@ const readyAudio = ref()
 const startAudio = ref()
 const gameOverAudio = ref()
 const scoreAudio = ref()
+const score10Audio = ref()
 const newHighScoreAudio = ref()
+const wowYouTried = ref()
 const showGameOver = ref(false)
 onMounted(() => {
   // readyAudio.value.play();
+  gameStore.getHighScore()
+
+
 })
 
 
 watch(game, (newValue, oldValue) => {
+  const currentScore = newValue.points[newValue.points.length - 1].score
+  console.log("debug score", currentScore)
+
+  if (oldValue.count < newValue.count) {
+    scoreAudio.value.play()
+    // if (currentScore == 10) {
+    //   score10Audio.value.play()
+    // }
+
+  }
   if (newValue.isActive !== oldValue.isActive) {
     if (game.value.isActive) {
       startAudio.value.play();
@@ -26,16 +41,16 @@ watch(game, (newValue, oldValue) => {
       if (game.value.score > topScore.value.ever || game.value.score > topScore.value.today) {
         newHighScoreAudio.value.play()
         gameStore.getHighScore()
+      } else if (game.value.score === topScore.value.ever || game.value.score === topScore.value.today) {
+        // For the lol's - if they get the same score as the top score 
+        wowYouTried.value.play()
       }
-
       setTimeout(() => {
         showGameOver.value = false;
       }, 5000)
     }
   }
-  if (game.value.isActive && oldValue.score < newValue.score) {
-    scoreAudio.value.play()
-  }
+
 })
 
 </script>
@@ -50,6 +65,12 @@ watch(game, (newValue, oldValue) => {
     </audio>
     <audio ref="scoreAudio">
       <source src="@/assets/audio/score.mp3" type="audio/mp3">
+    </audio>
+    <audio ref="score10Audio">
+      <source src="@/assets/audio/skeeballsounds/10.mp3" type="audio/mp3">
+    </audio>
+    <audio ref="wowYouTried">
+      <source src="@/assets/audio/skeeballsounds/wow_you_tried.mp3" type="audio/mp3">
     </audio>
     <!-- <audio ref="gameOverAudio">
       <source src="@/assets/audio/game-over.mp3" type="audio/mp3">
