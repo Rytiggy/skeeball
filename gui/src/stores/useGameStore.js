@@ -24,15 +24,13 @@ export const useGameStore = defineStore('game', () => {
 
 
   async function startGame(player = "Player") {
-    const response = await instance.post('/start-game', { data: { player } })
-    console.log(response?.data?.game)
-    // topScore.value = response.data
+    await instance.post('/start-game', { data: { player } })
   }
 
 
   async function getHighScore() {
     const response = await instance.get('/high-score')
-    console.log(response)
+    // console.log(response)
     topScore.value = response.data
   }
 
@@ -40,7 +38,7 @@ export const useGameStore = defineStore('game', () => {
 
   async function getLastFiveGames() {
     const response = await instance.get('/last-5-games')
-    console.log(response)
+    // console.log(response)
     lastFiveGames.value = response.data.lastFiveGames
   }
 
@@ -48,18 +46,20 @@ export const useGameStore = defineStore('game', () => {
   socket.addEventListener("message", (event) => {
     const response = JSON.parse(event.data)
     const data = response.data
-    console.log('ws', data)
+    // console.log('ws', response)
     if (response.type === 'start') {
       game.value = data.game
+      getLastFiveGames()
+      getHighScore()
 
     } else if (response.type === 'end') {
       game.value = data.game
       getLastFiveGames()
+      getHighScore()
     }
     else if (response.type === 'score') {
       game.value = data.game
     }
-    getHighScore()
 
   });
 
