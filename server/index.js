@@ -32,19 +32,16 @@ app.post('/start-game', (req, res) => {
     game.start(sendMessage, req.body?.data?.player)
 
     res.send({ message: "Game started" })
-
 })
 
 app.get('/high-score', async (req, res) => {
-    const games = await database.read()
-    const highscoreToday = Math.max(...games?.filter(game => isInToday(new Date(game?.createdAt))).map(o => o?.score))
-    const allTimeHighscore = Math.max(...games?.map(o => o?.score))
-    res.send({ ever: allTimeHighscore, today: highscoreToday })
+    const allTimeHighscore = await database.getTopScoreAllTime()
+    const highscoreToday = await database.getTopScoreToday()
+    res.send({ ever: allTimeHighscore.score, today: highscoreToday.score })
 })
 
 app.get('/last-5-games', async (req, res) => {
-    const games = await database.read()
-    const lastFiveGames = games.slice(Math.max(games.length - 5, 1))
+    const lastFiveGames = await database.getLast5Games()
     res.send({ lastFiveGames })
 })
 
@@ -52,14 +49,3 @@ app.listen(port, () => {
     console.log(`Skeeball started on port ${port}`)
 })
 
-
-function isInToday(inputDate) {
-    if (!inputDate)
-        return false
-
-    var today = new Date();
-    if (today.setHours(0, 0, 0, 0) == inputDate.setHours(0, 0, 0, 0)) {
-        return true;
-    }
-    else { return false; }
-}
