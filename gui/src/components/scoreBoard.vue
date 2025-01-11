@@ -3,7 +3,7 @@ import { useGameStore } from "@/stores/useGameStore";
 import { storeToRefs } from 'pinia'
 import { watch, onMounted, ref } from "vue";
 const gameStore = useGameStore();
-const { game, topScore } = storeToRefs(gameStore)
+const { game, topScore, isPending } = storeToRefs(gameStore)
 const readyAudio = ref()
 const startAudio = ref()
 const gameOverAudio = ref()
@@ -38,6 +38,8 @@ watch(game, (newValue, oldValue) => {
     }
     if (!game.value.isActive) {
       showGameOver.value = true;
+      if (isPending.value)
+        return
       if (game.value.score > topScore.value.ever || game.value.score > topScore.value.today) {
         newHighScoreAudio.value.play()
       } else if (game.value.score === topScore.value.ever || game.value.score === topScore.value.today) {

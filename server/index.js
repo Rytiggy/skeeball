@@ -37,7 +37,8 @@ app.post('/start-game', (req, res) => {
 app.get('/high-score', async (req, res) => {
     const allTimeHighscore = await database.getTopScoreAllTime()
     const highscoreToday = await database.getTopScoreToday()
-    res.send({ ever: allTimeHighscore.score, today: highscoreToday.score })
+
+    res.send({ ever: allTimeHighscore?.score ? allTimeHighscore.score : 0, today: highscoreToday?.score ? highscoreToday.score : 0 })
 })
 
 app.get('/last-5-games', async (req, res) => {

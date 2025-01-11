@@ -4,6 +4,8 @@ import { useApi } from '@/composables/useApi'
 
 export const useGameStore = defineStore('game', () => {
   const { instance, socket } = useApi()
+  const isPending = ref(false);
+
   const game = ref({
     score: 0,
     isActive: false,
@@ -45,15 +47,22 @@ export const useGameStore = defineStore('game', () => {
   // Listen for messages
   socket.addEventListener("message", (event) => {
     const response = JSON.parse(event.data)
-    const data = response.data
-    // console.log('ws', response)
+    const data = response.data;
     if (response.type === 'start') {
       game.value = data.game
       getLastFiveGames()
       getHighScore()
 
     } else if (response.type === 'end') {
+      isPending.value = false;
       game.value = data.game
+      getLastFiveGames()
+      getHighScore()
+    }
+    else if (response.type === 'end-pending') {
+      isPending.value = true;
+      game.value = data.game
+      game.value.isActive = false
       getLastFiveGames()
       getHighScore()
     }
@@ -65,5 +74,5 @@ export const useGameStore = defineStore('game', () => {
 
 
 
-  return { game, topScore, lastFiveGames, getHighScore, startGame, getLastFiveGames }
+  return { game, topScore, lastFiveGames, getHighScore, startGame, getLastFiveGames, isPending }
 })

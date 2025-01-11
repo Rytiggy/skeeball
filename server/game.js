@@ -1,6 +1,6 @@
 
 const sensors = require('./sensors.js')
-// const leds = require('./leds.js')
+const leds = require('./leds.js')
 const moter = require('./moters.js')
 const database = require('./database.js')
 
@@ -9,35 +9,43 @@ const sensorMap = [
   {
     gpio: 17,
     score: 100,
+    segment: 2
   },
   {
     gpio: 4,
     score: 100,
+    segment: 4
   },
   {
     gpio: 27,
     score: 50,
+    segment: 3
   },
   {
     gpio: 13,
     score: 40,
+    segment: 5
   },
   {
     gpio: 6,
     score: 30,
+    segment: 6
   },
 
   {
     gpio: 22,
     score: 20,
+    segment: 7
   },
   {
     gpio: 5,
     score: 10,
+    segment: 8
   },
   {
     gpio: 21,
     score: 0,
+    segment: null
   },
 ]
 
@@ -65,7 +73,6 @@ module.exports = {
   },
   start(sendMessage, player = "Player") {
     this.player = player
-
     // check early if game is already active and return if active
     if (this.isActive)
       return
@@ -76,10 +83,10 @@ module.exports = {
 
     try {
       // Open the door to let the ball fall
-      moter.setPostion(1000)
+      moter.setPostion(2500)
       // Wait a few seconds for the balls the fall down
       setTimeout(() => {
-        moter.setPostion(2000)
+        moter.setPostion(500)
       }, 5000)
     } catch (e) {
       console.error("error", e)
@@ -93,16 +100,27 @@ module.exports = {
 
       if (sensor.score !== 0) {
         this.points.push(sensor)
+        if (sensor.segment !== null) {
+          leds.scoreLedEffect({ id: sensor.segment })
+        }
       } else {
         this.balls.push(sensor)
       }
 
       sendMessage({ type: 'score', data: { game: this.getGame() } })
 
+
       if (this.balls.length >= 9 || this.points.length >= 9) {
-        database.write(this.getGame())
-        this.isActive = false
-        sendMessage({ type: 'end', data: { game: this.getGame() } })
+
+        if (this.balls.length >= 9) {
+          this.isActive = false
+          database.write(this.getGame())
+
+          sendMessage({ type: 'end', data: { game: this.getGame() } })
+
+        } else {
+          sendMessage({ type: 'end-pending', data: { game: this.getGame() } })
+        }
       }
     }
 
@@ -110,3 +128,4 @@ module.exports = {
     // leds.init()
   },
 }
+
