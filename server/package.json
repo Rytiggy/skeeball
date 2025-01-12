@@ -8,8 +8,7 @@
     "service:status": "sudo /etc/systemd/system/skeeball status",
     "service:stop": " sudo systemctl stop skeeball.service",
     "service:start": "sudo /etc/systemd/system/skeeball start",
-    "service:edit": "sudo vi /etc/systemd/system/skeeball",
-    "service:reload": "sudo update-rc.d skeeball defaults"
+    "service:edit": "sudo vi /etc/systemd/system/skeeball"
   },
   "author": "",
   "license": "ISC",

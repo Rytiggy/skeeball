@@ -14,7 +14,7 @@ const wowYouTried = ref()
 const missAudio = ref()
 const showGameOver = ref(false)
 onMounted(() => {
-  // readyAudio.value.play();
+  readyAudio.value.play();
   gameStore.getHighScore()
 })
 
@@ -53,6 +53,7 @@ watch(game, (newValue, oldValue) => {
   }
 
 }, { deep: true })
+
 
 </script>
 
