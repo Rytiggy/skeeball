@@ -30,6 +30,13 @@ export const useGameStore = defineStore('game', () => {
   }
 
 
+
+  async function resetGame() {
+    await instance.post('/reset-game', { data: {} })
+  }
+
+
+
   async function getHighScore() {
     const response = await instance.get('/high-score')
     // console.log(response)
@@ -74,5 +81,5 @@ export const useGameStore = defineStore('game', () => {
 
 
 
-  return { game, topScore, lastFiveGames, getHighScore, startGame, getLastFiveGames, isPending }
+  return { game, topScore, lastFiveGames, getHighScore, startGame, resetGame, getLastFiveGames, isPending }
 })

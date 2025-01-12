@@ -23,27 +23,27 @@ module.exports = {
 
 
     setTimeout(() => {
-      fetch("http://192.168.3.183/json/state", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          seg: [
-            {
-              id: segment.id,
-              on: false
-            }
-          ]
-        })
-      })
-        .then(response => response.json())
-        .then(data => console.log("Success:", data))
-        .catch(error => console.error("Error:", error));
+      this.toggleSegments([{
+        id: segment.id,
+        on: false
+      }]);
 
     }, 750)
+  },
+  toggleSegments(segments) {
+    fetch("http://192.168.3.183/json/state", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        seg: segments
+      })
+    })
+      .then(response => response.json())
+      .then(data => console.log("Success:", data))
+      .catch(error => console.error("Error:", error));
   }
-
   // init(strips) {
 
   // const options = {
@@ -68,6 +68,12 @@ module.exports = {
 
 
 }
+
+// {
+//   id: segment.id,
+//   on: false
+// }
+
 
 
 

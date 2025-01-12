@@ -34,6 +34,14 @@ app.post('/start-game', (req, res) => {
     res.send({ message: "Game started" })
 })
 
+app.post('/reset-game', (req, res) => {
+    console.log("reset Game", req.body)
+    game.reset(sendMessage)
+
+    res.send({ message: "Game reset" })
+})
+
+
 app.get('/high-score', async (req, res) => {
     const allTimeHighscore = await database.getTopScoreAllTime()
     const highscoreToday = await database.getTopScoreToday()

@@ -71,6 +71,12 @@ module.exports = {
       player: this.player
     }
   },
+  reset(sendMessage) {
+    this.isActive = false
+    this.points = []
+    this.balls = []
+    sendMessage({ type: 'end', data: { game: this.getGame() } })
+  },
   start(sendMessage, player = "Player") {
     this.player = player
     // check early if game is already active and return if active
@@ -79,6 +85,7 @@ module.exports = {
     this.isActive = true
     this.points = []
     this.balls = []
+    leds.toggleSegments(sensorMap.map(sensor => { return { id: sensor.segment, on: false } }))
     sendMessage({ type: 'start', data: { game: this.getGame() } })
 
     try {
